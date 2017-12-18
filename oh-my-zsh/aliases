@@ -1,4 +1,4 @@
-# Author: https://github.com/gokulkrishh
+# Author: https://github.com/logeshpaul
 
 # 1. GIT
 
@@ -20,6 +20,7 @@ alias mkd="mkdir -p "$@" && cd "$_";"
 
 ## Finder
 alias f="open -a Finder"
+alias ll="ls -al"
 alias la="alias | sed 's/=.*//'"
 
 ## Delete & Cleanup
