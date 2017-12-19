@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Welcome!!
-# Custom dotfiles to get you started with OS X machine for development.
 # Author: https://github.com/logeshpaul
 # Source: https://github.com/logeshpaul/dotfiles
 
@@ -9,16 +7,11 @@
 source helper/utility.sh
 
 # Welcome msg
-e_bold "${tan}┌──────────────────────────────────────────────────────────────┐
-|                                                              |
-| Welcome!!                                                    |
-|                                                              |
-| Setup your OS X machine for web development at ease.         |
-| Author: https://github.com/logeshpaul                        |
-|                                                              |
-└──────────────────────────────────────────────────────────────┘"
+# ---------------
+e_bold "${tan}Hola!!!"
 
-## Mac Preferences
+# Mac Preferences
+# ---------------
 e_header "Mac Preference Update"
 e_text "Please enter your password for performing some Mac Customizations"
 
@@ -26,14 +19,17 @@ source osx/screen.sh
 source osx/dock.sh
 source osx/terminal.sh
 source osx/ui.sh
+source osx/functions.sh
 
-## Create Necessary Directories
+# Create Necessary Directories
+# ----------------------------
 e_header "Creating directory structure"
 
 cd ~/ && mkdir Codelabs && mkdir Works
 cd ~/lp-dotfiles
 
-# 1. Git configuration
+# Git configuration
+# -----------------
 e_header "Setup git config (global)"
 
 cp gitignore ~/.gitignore_global  ## Adding .gitignore global
@@ -57,7 +53,8 @@ else
   e_error "Not set"
 fi
 
-# 2. Install Oh-My-Zsh & custom aliases
+# Install Oh-My-Zsh & custom aliases
+# ----------------------------------
 ZSH=~/.oh-my-zsh
 
 if [ -d "$ZSH" ]; then
@@ -75,7 +72,8 @@ else
   cp -R oh-my-zsh/z ~/z                                                     ## z autocompletion
 fi
 
-# 3. Install Homebrew
+# Install Homebrew
+# ----------------
 if test ! $(which brew); then
   e_header "Installing Homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -83,7 +81,8 @@ else
   e_warning "Homebrew is already installed. Skipping.."
 fi
 
-# 4. Install NodeJS
+# Install NodeJS
+# --------------
 if test ! $(which nvm); then
   e_header "Installing nvm.."
 
@@ -110,6 +109,7 @@ else
 fi
 
 ## Yarn install
+# -------------
 if ! type yarn > /dev/null
 then
   e_header "Install yarn.."
