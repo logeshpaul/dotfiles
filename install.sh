@@ -26,7 +26,7 @@ source osx/functions.sh
 e_header "Creating directory structure"
 
 cd ~/ && mkdir Codelabs && mkdir Works
-cd ~/lp-dotfiles
+cd ~/dotfiles
 
 # Git configuration
 # -----------------
