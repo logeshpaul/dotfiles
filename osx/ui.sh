@@ -71,3 +71,11 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist
+
+###############################################################################
+# Menu Bar                                                                    #
+###############################################################################
+
+# Change to format of date time display to show something like "Mon 8 Jan 11:23 PM"
+defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  hh.mm a"
+killall -KILL SystemUIServer
