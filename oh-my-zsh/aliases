@@ -12,9 +12,13 @@ alias o="open"
 alias oo="open ."
 alias ..="cd .."
 alias ...="cd ../.."
+alias lab=" cd ~/Codelabs"
 
-## Make dir and cd into it
+## Directory Helpers
+# Make dir and cd into it
 alias mkd="mkdir -p "$@" && cd "$_";"
+# Recursive directory listing command that produces a depth indented listing of files (uses tree plugin)
+alias t=tree
 
 # 3. Tools & Utilities
 
