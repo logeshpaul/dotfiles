@@ -102,8 +102,8 @@ if test ! $(which nvm); then
   sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
   ## Set npm global config
-  npm config set init.author.name "Gokulakrishnan Kalaikovan" ## Replace it with your name
-  npm config set init.author.email "krishnangokul9@gmail.com" ## Replace it with your email id
+  npm config set init.author.name "Logesh Paul" ## Replace it with your name
+  npm config set init.author.email "logeshpaul@gmail.com" ## Replace it with your email id
 else
   e_warning "NVM is already installed. Skipping.."
 fi
