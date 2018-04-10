@@ -15,11 +15,12 @@ e_bold "${tan}Hola!!!"
 e_header "Mac Preference Update"
 e_text "Please enter your password for performing some Mac Customizations"
 
-source osx/screen.sh
 source osx/dock.sh
+source osx/functions.sh
+source osx/mission-control.sh
+source osx/screen.sh
 source osx/terminal.sh
 source osx/ui.sh
-source osx/functions.sh
 
 # Create Necessary Directories
 # ----------------------------
