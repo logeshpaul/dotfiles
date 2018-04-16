@@ -64,13 +64,15 @@ else
   e_header "Installing Oh My Zsh..."
   curl -L http://install.ohmyz.sh | sh
 
+  git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
   ## To install ZSH themes & aliases
   e_header "Copying ZSH themes & aliases..."
   e_note "Check .aliases file for more details."
   cp oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
   cp oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
   cp oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme   ## Copy custom dracula theme
-  cp -R oh-my-zsh/z ~/z                                                     ## z autocompletion
+  cp -R oh-my-zsh/z ~/z                                                  ## z autocompletion
 fi
 
 # Install Homebrew
