@@ -1,15 +1,17 @@
 {
 	"editor.autoIndent": true,
-	"editor.fontFamily": "'Operator Mono', Consolas, Monaco, monospace",
+	"editor.fontFamily": "'Dank Mono', Consolas, Monaco, monospace",
 	"editor.fontLigatures": true,
-	"editor.fontSize": 12,
+	"editor.fontSize": 13,
 	"editor.formatOnSave": true,
 	"editor.letterSpacing": 0.5,
 	"editor.lineHeight": 25,
 	"editor.minimap.enabled": false,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.tabSize": 2,
-	"editor.snippetSuggestions": "top",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": false
+	},
 	"files.associations": {
 		"*.js": "javascriptreact"
 	},
@@ -19,7 +21,7 @@
 	"window.restoreFullscreen": true,
 	"window.newWindowDimensions": "maximized",
 	"workbench.startupEditor": "newUntitledFile",
-	"workbench.iconTheme": "material-icon-theme",
+	"workbench.iconTheme": "eq-material-theme-icons",
 	"terminal.integrated.shell.osx": "/bin/zsh",
 	"markdown.preview.breaks": true,
 	"javascript.validate.enable": false,
@@ -63,5 +65,11 @@
 		"suppressShowKeyBindingsNotice": true,
 		"suppressUpdateNotice": false,
 		"suppressWelcomeNotice": true
-	}
+	},
+	"editor.matchBrackets": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": false,
+	"workbench.colorTheme": "Material Theme Ocean",
+	"gitlens.historyExplorer.enabled": true,
+	"javascript.updateImportsOnFileMove.enabled": "always"
 }
