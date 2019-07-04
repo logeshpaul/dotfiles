@@ -78,4 +78,20 @@ alias yag="yarn global add"
 # PROJECTS
 # -------------------------------------------------------------------
 alias ssd="z ssd && code . && ./bin/dev"
+alias mdr="z mdr && code . && ./bin/dev"
+alias sce="z sce && code . && ./bin/dev"
+alias dev="./bin/dev"
+
+# -------------------------------------------------------------------
+# NODE
+# -------------------------------------------------------------------
+alias nrb="npm run build"
+alias nrt="npm run test"
+
+# -------------------------------------------------------------------
+# OTHERS
+# -------------------------------------------------------------------
+alias rdm="rake db:migrate"
+alias rdd="rake db:drop"
+alias rdc="rake db:create"
 alias gcml="gcm && ggl"
