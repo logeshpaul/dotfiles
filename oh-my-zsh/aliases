@@ -103,13 +103,16 @@ alias yag="yarn global add"
 # PROJECTS
 # -------------------------------------------------------------------
 
-alias spa="cd Works/Sycamore/Code/ssd"
-alias mdr="cd Works/Sycamore/Code/mdr"
-alias sce="cd Works/Sycamore/Code/nextGen"
+alias spa="cd ~/Works/Sycamore/Code/ssd"
+alias mdr="cd ~/Works/Sycamore/Code/mdr"
+alias sce="cd ~/Works/Sycamore/Code/sce"
+alias lp="cd ~/Works/logeshpaul.com"
 
-alias sspa="cd Works/Sycamore/Code/ssd && code . && ./bin/dev"
-alias smdr="cd Works/Sycamore/Code/mdr && code . && ./bin/dev"
-alias ssce="cd Works/Sycamore/Code/nextGen && code . && ./bin/dev"
+# Run the project
+alias sspa="cd ~/Works/Sycamore/Code/ssd && code . && ./bin/dev"
+alias smdr="cd ~/Works/Sycamore/Code/mdr && code . && ./bin/dev"
+alias ssce="cd ~/Works/Sycamore/Code/sce && code . && ./bin/dev"
+alias slp="cd ~/Works/logeshpaul.com && code . && rake preview"
 alias dev="./bin/dev"
 
 # -------------------------------------------------------------------
