@@ -3,53 +3,72 @@
 # -------------------------------------------------------------------
 # GIT
 # -------------------------------------------------------------------
+
 alias s="git status"
-alias gcml="gcm && ggl"
+# git commit & git pull. Command: gcml 'Commit message'
+  alias gcml="gcm && ggl"
+# git pull & git fetch. Command: gl
+  alias gl="ggl && gf"
+# git add & git commit with message. Command: gac 'Commit message'
+  alias gac="ga . && gcmsg"
 
 # -------------------------------------------------------------------
 # EASY NAVIGATION
 # -------------------------------------------------------------------
+
 ## Shorcut navigations
+
 alias o="open"
 alias oo="open ."
 alias ..="cd .."
 alias ...="cd ../.."
 alias lab="cd ~/Codelabs"
 alias work="cd ~/Works"
+
 ## Directory Helpers
 # Make dir and cd into it
-alias mkd="mkdir -p "$@" && cd "$_";"
+  alias mkd="mkdir -p "$@" && cd "$_";"
 # Recursive directory listing command that produces a depth indented listing of files (uses tree plugin)
-alias t=tree
+  alias t=tree
 
 # -------------------------------------------------------------------
 # TOOLS & UTILITIES
 # -------------------------------------------------------------------
+
 ## Finder
 alias f="open -a Finder"
 alias ll="ls -al"
 alias la="alias | sed 's/=.*//'"
+
 ## Delete & Cleanup
 alias rm="=rm -rf"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
 ## IP Address
 alias ip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
 ## Capture Screenshot
 alias sca="screencapture -c -W -P"
 
 # -------------------------------------------------------------------
 # OSX UTILITIES
 # -------------------------------------------------------------------
+
 ## Log Off
 alias logoff="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
 ## Empty trash
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
 ## ZIP folder without hidden files
 alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
-## To kill all chrome tabs
+
+## To kill all chrome tabs (TODO: Not working)
 alias kt="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
 ## List all files colorized in long format
 alias l='ls -l ${colorflag}'
+
 ## Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
@@ -57,16 +76,22 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # -------------------------------------------------------------------
 # WEB DEVELOPMENT
 # -------------------------------------------------------------------
+
 ## Editor
+alias c="code ."
 alias at="open -a 'Atom'"
+
 ## Chrome aliases
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+
 ## Local server using python httpServer
 #TODO: Check this, I'm not installing python
 alias server='python -m SimpleHTTPServer' # To start a local server
+
 ## To update brew, npm, gem and their installed packages
 alias update='brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'
+
 ## NPM & Yarn Shortcuts
 alias npmi="sudo npm install"
 alias npmg="sudo npm install -g"
@@ -77,21 +102,27 @@ alias yag="yarn global add"
 # -------------------------------------------------------------------
 # PROJECTS
 # -------------------------------------------------------------------
-alias ssd="z ssd && code . && ./bin/dev"
-alias mdr="z mdr && code . && ./bin/dev"
-alias sce="z sce && code . && ./bin/dev"
+
+alias spa="cd Works/Sycamore/Code/ssd"
+alias mdr="cd Works/Sycamore/Code/mdr"
+alias sce="cd Works/Sycamore/Code/nextGen"
+
+alias sspa="cd Works/Sycamore/Code/ssd && code . && ./bin/dev"
+alias smdr="cd Works/Sycamore/Code/mdr && code . && ./bin/dev"
+alias ssce="cd Works/Sycamore/Code/nextGen && code . && ./bin/dev"
 alias dev="./bin/dev"
 
 # -------------------------------------------------------------------
 # NODE
 # -------------------------------------------------------------------
+
 alias nrb="npm run build"
 alias nrt="npm run test"
 
 # -------------------------------------------------------------------
 # OTHERS
 # -------------------------------------------------------------------
+
 alias rdm="rake db:migrate"
 alias rdd="rake db:drop"
 alias rdc="rake db:create"
-alias gcml="gcm && ggl"
