@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Hello, Welcome to macOS setup for devs.
 # Author: https://github.com/logeshpaul
 # Source: https://github.com/logeshpaul/dotfiles
 
@@ -8,12 +8,9 @@ source helper/utility.sh
 
 # Welcome msg
 # ---------------
-e_bold "${tan}Hola!!!"
-
-# Mac Preferences
-# ---------------
-e_header "Mac Preference Update"
-e_text "Please enter your password for performing some Mac Customizations"
+e_bold "${tan}Hello!"
+e_header "MacOS Setup"
+e_text "Please enter your password for performing Mac Customizations"
 
 source osx/dock.sh
 source osx/functions.sh
@@ -24,7 +21,7 @@ source osx/ui.sh
 
 # Create Necessary Directories
 # ----------------------------
-e_header "Creating directory structure"
+e_text "Creating directory structure..."
 
 cd ~/ && mkdir Codelabs && mkdir Works
 cd ~/dotfiles
@@ -69,10 +66,11 @@ else
   ## To install ZSH themes & aliases
   e_header "Copying ZSH themes & aliases..."
   e_note "Check .aliases file for more details."
-  cp oh-my-zsh/aliases ~/.aliases                                        ## Copy aliases
-  cp oh-my-zsh/zshrc ~/.zshrc                                            ## Copy zshrc configs
-  cp oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme   ## Copy custom dracula theme
-  cp -R oh-my-zsh/z ~/z                                                  ## z autocompletion
+  cp oh-my-zsh/aliases ~/.aliases ## Copy aliases
+  cp oh-my-zsh/zshrc ~/.zshrc ## Copy zshrc configs
+  cp oh-my-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme ## Copy custom dracula theme
+  cp -R oh-my-zsh/z ~/z ## Copy z.sh autocompletion file
+  git clone https://github.com/peterhurford/git-it-on.zsh ~/.oh-my-zsh/custom/plugins/git-it-on ## Copy git it on utilities plugin
 fi
 
 # Install Homebrew
@@ -90,11 +88,8 @@ if test ! $(which nvm); then
   e_header "Installing nvm.."
 
   brew install nvm
-
   nvm install stable ## Installing stable version of node
-
   nvm use stable ## Setting stable as default node
-
   nvm use --delete-prefix stable
 
   ## To setup npm install/update -g without sudo

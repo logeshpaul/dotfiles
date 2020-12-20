@@ -1,5 +1,11 @@
 #!/bin/bash
 
+## Custom color codes & utility functions
+  source ./helper/utility.sh
+
+# Dock
+  e_text 'Setting Terminal Settings …'
+
 # Updating to custom dracula terminal theme
 open "Dracula.terminal"
 

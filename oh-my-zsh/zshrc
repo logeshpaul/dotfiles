@@ -6,7 +6,12 @@ export CLICOLOR=true
 
 ## Set name of the theme to load.
 ## Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="dracula"
+#ZSH_THEME="dracula"
+# ZSH_THEME="dallas"
+# ZSH_THEME="gnzh"
+# ZSH_THEME="jonathan"
+ZSH_THEME="fino-time"
+# ZSH_THEME="passion"
 
 ## oh-my-zsh plugins
 plugins=(git npm zsh-nvm)
@@ -28,7 +33,7 @@ source ~/dotfiles/oh-my-zsh/aliases
 export EDITOR="vim"
 
 ## Postgres path
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/10/bin
 
 ## Adding RVM & other rails related to the path
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -62,3 +67,21 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 clear
 
 ## END
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# export PATH="/usr/local/opt/icu4c/bin:$PATH"
+# export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+# export YVM_DIR=/usr/local/opt/yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+export YVM_DIR=/Users/logeshpaul/.yvm
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# heroku toolbelt
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+## Custom color codes & utility functions
+  source ./helper/utility.sh
+
+# Dock
+  e_text 'Setting Screen Settings …'
+
 # Ask for the administrator password upfront
 sudo -v
 
