@@ -77,11 +77,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export YVM_DIR=/Users/logeshpaul/.yvm
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
-# heroku toolbelt
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
